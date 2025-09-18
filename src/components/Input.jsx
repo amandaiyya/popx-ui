@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Custom Input Component
 function Input({
     type = 'text',
     value = '',

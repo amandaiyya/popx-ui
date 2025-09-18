@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Profile Page
 function ProfilePage() {
   return (
     <div className='app-container text-text flex flex-col shadow-lg'>

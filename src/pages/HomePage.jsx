@@ -1,6 +1,7 @@
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 
+// Home Page
 function HomePage() {
   const navigate = useNavigate()
 
@@ -12,12 +13,14 @@ function HomePage() {
       </div>
 
       <div className="space-y-3">
+        {/* Button Component for Signup */}
         <Button 
           isPrimary={true} 
           onClick={() => navigate('/signup')}
         >Create Account
         </Button>
 
+        {/* Button Component for Login */}
         <Button
           isPrimary={false}
           onClick={() => navigate('/login')}

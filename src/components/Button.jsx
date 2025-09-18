@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
+// Custom Button Component
 function Button({
     children,
     isDisabled = false,
@@ -14,7 +15,7 @@ function Button({
       onClick={onClick}
       disabled={isDisabled}
       className={clsx(
-        "rounded-md p-3 w-full cursor-pointer",
+        "rounded-md p-3 w-full cursor-pointer hover:shadow-md",
          isPrimary ? "bg-primary text-white hover:bg-primary/" : "bg-secondary text-text",
          isDisabled && "bg-tertiary text-white",
          className,

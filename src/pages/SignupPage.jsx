@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import Input from '../components/Input';
 
+// Signup Page
 function SignupPage() {
   const navigate = useNavigate();
 
@@ -13,9 +14,11 @@ function SignupPage() {
   const [companyName, setCompanyName] = useState('Marry Corporations');
   const [isAgency, setIsAgency] = useState("yes");
 
+  // Handling submit button disabling based on input
   const fields = [fullName, phoneNumber, email, password, companyName, isAgency];
   const isDisabled = fields.some((field) => field.trim() === '')
 
+  // Form Submit Hanlder
   const handleSubmit = (e)=>{
     e.preventDefault();
     navigate('/profile');
@@ -27,8 +30,10 @@ function SignupPage() {
         <p className="text-3xl text-text font-semibold max-w-[12ch]">Create your PopX account</p>
       </div>
 
+      {/* Form for Signup*/}
       <form onSubmit={() => navigate('/Profile')} className="flex-1 flex flex-col justify-between">
         <div className="space-y-4">
+          {/* Input Component for Full Name*/}
           <Input 
             value={fullName}
             type='text'
@@ -38,7 +43,8 @@ function SignupPage() {
             onChange={(e) => setFullName(e.target.value)}
           />
 
-           <Input 
+          {/* Input Component for email */}
+          <Input 
             value={phoneNumber}
             type='text'
             isRequired
@@ -47,7 +53,8 @@ function SignupPage() {
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
 
-           <Input 
+          {/* Input Component for email */}
+          <Input 
             value={email}
             type='email'
             isRequired
@@ -56,7 +63,8 @@ function SignupPage() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-           <Input 
+          {/* Input Component for password */}
+          <Input 
             value={password}
             type='password'
             isRequired
@@ -65,7 +73,8 @@ function SignupPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-           <Input 
+          {/* Input Component for company name */}
+          <Input 
             value={companyName}
             type='text'
             label="Company name"
@@ -73,6 +82,7 @@ function SignupPage() {
             onChange={(e) => setCompanyName(e.target.value)}
           />
 
+          {/* Input Component for isAgency */}
           <div className='text-text text-sm space-y-2'>
             <p>
               Are you an Agency?
@@ -105,6 +115,7 @@ function SignupPage() {
           </div>
         </div>
 
+        {/* Button Component for Form Submitting */}
         <Button
           type='submit'
           isPrimary
