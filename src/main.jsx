@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import '@fontsource-variable/rubik';
 import Layout from './Layout.jsx';
 
 import { 
@@ -29,9 +30,11 @@ const router = createBrowserRouter(
 
       {/* Route for The Wildcard Paths */}
       <Route path='*' element={
-        <>
-          <p>404 Page Not found</p>
-        </>
+        <div className="w-screen h-screen">
+          <div className="app-container px-5 py-8 flex flex-col justify-center items-center gap-8 shadow-lg">
+            <p className='p-2 text-text font-light border-2 border-tertiary rounded-md'>404 Page Not Found</p>
+          </div>
+        </div>
       }/>
     </Route>
   )

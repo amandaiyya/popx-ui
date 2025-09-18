@@ -6,4 +6,20 @@
     --color-secondary: #6C25FF4B;
     --color-tertiary: #CBCBCB;
     --color-text: #1D2226;
+    --color-required: #DD4A3D;
+    --color-placeholder: #919191;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Rubik Variable', sans-serif;
+}
+
+.app-container{
+    width: 100%;
+    height: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+    background: var(--color-background);
+    overflow-x: hidden;
 }
